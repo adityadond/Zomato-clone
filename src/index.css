@@ -1,5 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Nunito:ital,wght@0,200;1,300&family=Poppins:wght@500&display=swap');
+@import './components/styles/commonClasses.css';
+@import './components/styles/variable.css';
 
 body {
   margin: 0;
