@@ -21,5 +21,5 @@
   
   .slick-next:before,
   .slick-prev:before {
-    color: var(--gray);
+    color: 'red'
   }

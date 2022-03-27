@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-// import Carousel from "react-grid-carousel";
+ import Carousel from "react-grid-carousel";
 import NextArrow from "../../common/carousel/NextArrow";
 import PrevArrow from "../../common/carousel/PrevArrow";
 import "./DeliveryCollections.css";
@@ -77,7 +77,7 @@ const deliveryItems = [
 ];
 
 const settings = {
-  
+  dots:true,
   infinite: true,
   slidesToShow: 4,
   slidesToScroll: 1,

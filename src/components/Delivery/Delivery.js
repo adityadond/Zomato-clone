@@ -2,6 +2,9 @@ import React from "react";
 import "./Delivery.css";
 import Filters from "../common/filters/Filters";
 import DeliveryCollections from "./DeliveryCollections/DeliveryCollections";
+import TopBrands from "./topBrands/TopBrands";
+import ExploreSection from "../common/ExploreSection/ExploreSection";
+import { restaurants } from "../../data/restaurants";
 
 const deliveryfilters = [
   {
@@ -32,6 +35,8 @@ const deliveryfilters = [
   },
 ];
 
+const restaurantList=restaurants
+
 function Delivery() {
   return (
     <div>
@@ -39,6 +44,8 @@ function Delivery() {
         <Filters filterLists={deliveryfilters} />
       </div>
       <DeliveryCollections/>
+      <TopBrands/>
+      <ExploreSection list={restaurantList} collectionName='Delivery Restaurants in Banglore'/>
     </div>
   );
 }
