@@ -58,6 +58,7 @@ function TabOptions({activeTab,setActiveTab}) {
               />
 
              </div>
+              <div className="tab-name">{tab.name}</div> 
             </div>
           )
           })}

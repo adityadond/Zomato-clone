@@ -4,6 +4,7 @@
   
   .options-wrapper {
     display: flex;
+    cursor: pointer;
   }
   
   .tab-item {
