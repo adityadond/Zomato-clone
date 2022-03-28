@@ -5,7 +5,7 @@ import ExploreSection from '../common/ExploreSection/ExploreSection';
 import Filters from '../common/filters/Filters';
 import './NightLife.css'
 
-const nightLifeList=nightLife
+const nightLifeLists=nightLife
 const nightFilters = [
   {
     id: 1,
@@ -79,13 +79,13 @@ const collectionList = [
 function NightLife() {
   return (
     <div>
-      <h1>Hi</h1>
+     
       <Collection list={collectionList}/>
       <div className="max-width">
         <Filters filterLists={nightFilters}/>
 
       </div>
-      <ExploreSection restaurants={nightLifeList}
+      <ExploreSection list={nightLifeLists}
       collectionName="Nightlife in banglore"/>
 
     </div>

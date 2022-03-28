@@ -113,10 +113,10 @@ function DinningOut() {
   return (
     <div><Collection list={collectionList}/>
     <div className="max-width">
-        <Filters filterList={diningFilters} />
+        <Filters filterLists={diningFilters} />
       </div>
       <ExploreSection
-        restaurants={diningLists}
+        list={diningLists}
         collectionName="Dine-Out Restaurants in Bangalore"
       />
     </div>
