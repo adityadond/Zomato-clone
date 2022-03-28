@@ -7,20 +7,9 @@ import DinningOut from "../../components/DinningOut/DinningOut";
 import NightLife from "../../components/NightLife/NightLife";
 
 function HomePage() {
-const [activeTab,setActiveTab]=useState("Delivery")
+  const [activeTab, setActiveTab] = useState("Delivery");
+  console.log(activeTab);
 
-  const getCorrectScreen=(tab)=>{
-    switch(tab){
-      case "Delivery":
-        return<Delivery/>
-        case "Dining Out":
-          return<DinningOut/>
-          case "NightLife":
-            return<NightLife/>
-            default:
-              return<Delivery/>
-    }
-  }
   return (
     <div>
       <Header />
@@ -31,6 +20,17 @@ const [activeTab,setActiveTab]=useState("Delivery")
     </div>
   );
 }
-
+const getCorrectScreen = (tab) => {
+  switch (tab) {
+    case "Delivery":
+      return <Delivery />;
+    case "Dining Out":
+      return <DinningOut />;
+    case "NightLife":
+      return <NightLife />;
+    default:
+      return <Delivery />;
+  }
+};
 
 export default HomePage;

@@ -23,7 +23,53 @@ function ExploreCard({ restaurant, i }) {
       : null;
 
   return (
-    <div>ExploreCard</div>
+    <div className={`explore-card cur-po ${i < 3 ? "explore-card-first" : ""}`}>
+    <div className="explore-card-cover">
+      <img
+        src={coverImg}
+        className="explore-card-image"
+        alt={restaurant.info.name}
+      />
+      <div className="delivery-time">{deliveryTime}</div>
+      {proOff && <div className="pro-off">{proOff}</div>}
+      {goldOff && <div className="gold-off absolute-center">{goldOff}</div>}
+      {discount && <div className="discount absolute-center">{discount}</div>}
+    </div>
+    <div className="res-row">
+      <div className="res-name">{name}</div>
+      {rating && (
+        <div className="res-rating absolute-center">
+          {rating} <i className="fi fi-sr-star absolute-center" />
+        </div>
+      )}
+    </div>
+    <div className="res-row">
+      {cuisines.length && (
+        <div className="res-cuisine">
+          {cuisines.map((item, i) => (
+            <span className="res-cuisine-tag">
+              {item}
+              {i !== cuisines.length - 1 && ","}
+            </span>
+          ))}
+        </div>
+      )}
+      {approxPrice && <div className="res-price">{approxPrice}</div>}
+    </div>
+    {bottomContainers.length > 0 && (
+      <div>
+        <div className="card-separator"></div>
+        <div className="explore-bottom">
+          <img
+            src={bottomContainers[0]?.image?.url}
+            alt={bottomContainers[0]?.text}
+            style={{ height: "18px" }}
+          />
+          <div className="res-bottom-text">{bottomContainers[0]?.text}</div>
+        </div>
+      </div>
+    )}
+  </div>
   )
 }
 
